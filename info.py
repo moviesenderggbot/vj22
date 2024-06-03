@@ -1,4 +1,4 @@
-# Don't Remove Credit @VJ_Botz
+ Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
@@ -52,7 +52,7 @@ FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://sushankm16:4i1WAfPYKWyqPIDD@cluster0.sngp9pz.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jimes25245:vnvUvPplzbQSEhq1@cluster0.pzqe2nm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0.")
 DATABASE_NAME = environ.get('DATABASE_NAME', "techvjfilterbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'techvjcollection')
 
@@ -103,11 +103,8 @@ VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/autofilterupdate/
 
 # Shortlink Info
 SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'Successfully added shortlink API for MOVIES REQUESTGROUP.
-
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zipshort.net')
-SHORTLINK_API = environ.get('SHORTLINK_API', '43fcba24ca148f6e395f86b33efe567d25f33bd7')
-
+SHORTLINK_API = environ.get('SHORTLINK_API', '43fcba24ca148f6e395f86b33efe567d25f33bd7') 
 # Others
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 PORT = environ.get("PORT", "8080")
