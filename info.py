@@ -105,9 +105,8 @@ VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/autofilterupdate/
 SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'Successfully added shortlink API for MOVIES REQUESTGROUP.
 
-Current Shortlink Website: zipshort.net
-Current API: 43fcba24ca148f6e395f86b33efe567d25f33bd7)
-SHORTLINK_API = environ.get('SHORTLINK_API', 'hRPS5vvZc0OGOEUQJMJzPiojoVK2')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zipshort.net')
+SHORTLINK_API = environ.get('SHORTLINK_API', '43fcba24ca148f6e395f86b33efe567d25f33bd7')
 
 # Others
 MAX_B_TN = environ.get("MAX_B_TN", "5")
@@ -149,7 +148,7 @@ URL = environ.get("URL", "https://mytestvj-998c9929dc7a.herokuapp.com/")
 RENAME_MODE = bool(environ.get('RENAME_MODE', False)) # Set True or False
 
 # Auto Approve Info : If True Then Bot Approve New Upcoming Join Request Else Not
-AUTO_APPROVE_MODE = bool(environ.get('AUTO_APPROVE_MODE', False)) # Set True or False
+AUTO_APPROVE_MODE = bool(environ.get('AUTO_APPROVE_MODE', True)) # Set True or False
 
 # Save Restricted Info : If True Then Bot Save Content From Restricted Channel Else Not
 SAVE_RESTRICTED_MODE = bool(environ.get('SAVE_RESTRICTED_MODE', False)) # Set True or False
