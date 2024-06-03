@@ -1,4 +1,13 @@
- id_pattern = re.compile(r'^.\d+$')
+# Don't Remove Credit @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
+# Ask Doubt on telegram @KingVJ01
+
+
+import re
+from os import environ,getenv
+from Script import script 
+
+id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
     if value.lower() in ["true", "yes", "1", "enable", "y"]:
         return True
@@ -8,10 +17,11 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'TechVJBot')
-API_ID = int(environ.get('API_ID', '22182189'))
-API_HASH = environ.get('API_HASH', '5e7c4088f8e23d0ab61e29ae11960bf5')
+SESSION = environ.get('SESSION', 'MOVIES')
+API_ID = int(environ.get('API_ID', '24491383'))
+API_HASH = environ.get('API_HASH', '78e18eba669cc519ffd7a3c89f9ed32a')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
+
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/c7ac07501e857860334e7.jpg https://telegra.ph/file/943126cf288c36e0e086d.jpg https://telegra.ph/file/63b6dc593585363ded68d.jpg')).split() #SAMPLE PIC
@@ -42,7 +52,7 @@ FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jimes25245:vnvUvPplzbQSEhq1@cluster0.pzqe2nm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0.")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://sushankm16:4i1WAfPYKWyqPIDD@cluster0.sngp9pz.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "techvjfilterbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'techvjcollection')
 
@@ -93,8 +103,11 @@ VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/autofilterupdate/
 
 # Shortlink Info
 SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'Successfully added shortlink API for MOVIES REQUESTGROUP.
+
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zipshort.net')
-SHORTLINK_API = environ.get('SHORTLINK_API', '43fcba24ca148f6e395f86b33efe567d25f33bd7') 
+SHORTLINK_API = environ.get('SHORTLINK_API', '43fcba24ca148f6e395f86b33efe567d25f33bd7')
+
 # Others
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 PORT = environ.get("PORT", "8080")
