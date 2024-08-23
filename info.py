@@ -30,10 +30,10 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/How_To_Open_Linkl")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/2f98a69a9e991fd250bd0.jpg")
 
 # Admins, Channels & Users
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002063385451'))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1913676476').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002055683410 -1002126906819 -1001923726594').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '1913676476').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002229252667'))
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7229906119').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002176526041').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '7229906119').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # auth_channel means force subscribe channel.
@@ -43,8 +43,8 @@ auth_channel = environ.get('AUTH_CHANNEL', '-1002113181046') # give your force s
 auth_grp = environ.get('AUTH_GROUP', '') # give your force subscribe group id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002131162042')
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002012335024')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002173577255')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002167020175')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
@@ -68,9 +68,9 @@ OWNER_USERNAME = environ.get('OWNER_USERNAME', 'kingvj01') # owner username with
 
 # Links
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Free_Movies_Request_Group')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/autofilterupdate')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/autofilterupdate/2')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'moiveadminsupport') # Support Chat Link Without https:// or @
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/xyz_bots')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/xyz_bots/2')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'xyz_movies_req') # Support Chat Link Without https:// or @
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
