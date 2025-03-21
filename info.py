@@ -18,9 +18,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'MOVIES')
-API_ID = int(environ.get('API_ID', '24491383'))
-API_HASH = environ.get('API_HASH', '78e18eba669cc519ffd7a3c89f9ed32a')
-BOT_TOKEN = environ.get('BOT_TOKEN', "7382217137:AAEOzup8bjacHLyvzHAoSEQaI61oA6G75ls")
+API_ID = int(environ.get('API_ID', '21589428'))
+API_HASH = environ.get('API_HASH', '70013148f063c5d1eb2a71f199bf2bbf')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7805422907:AAFhOReLBd0CmEn0ee10PNGl4Q9YJzELRIk")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -30,25 +30,25 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/How_To_Open_Linkl")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/2f98a69a9e991fd250bd0.jpg")
 
 # Admins, Channels & Users
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002229252667'))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7229906119').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002176526041 -1002192721824').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '7229906119').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002666607351'))
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7812900454').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002348194572').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '7812900454').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # auth_channel means force subscribe channel.
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
-REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', True)) # Set True Or False
+REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', False)) # Set True Or False
 auth_channel = environ.get('AUTH_CHANNEL', '-1002113181046') # give your force subscribe channel id here else leave it blank
 auth_grp = environ.get('AUTH_GROUP', '-1002167020175') # give your force subscribe group id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002173577255')
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002167020175')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002677058408')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002677058408')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002229252667')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002666607351')).split()]
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 
 # MongoDB information
@@ -67,10 +67,10 @@ PAYMENT_TEXT = environ.get('PAYMENT_TEXT', '<b>- ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟ�
 OWNER_USERNAME = environ.get('OWNER_USERNAME', 'xyzdevoloper') # owner username without @
 
 # Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Free_Movies_Request_Group')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/xyz_bots')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/xyz_bots/2')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'xyz_movies_req') # Support Chat Link Without https:// or @
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/GG_Botz')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/GG_Botz')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/GG_Botz')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'GG_Botz') # Support Chat Link Without https:// or @
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
