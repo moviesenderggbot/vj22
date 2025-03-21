@@ -2,6 +2,8 @@
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
+# Clone Code Credit : YT - @Tech_VJ / TG - @VJ_Bots / GitHub - @VJBots
+
 import sys, glob, importlib, logging, logging.config, pytz, asyncio
 from pathlib import Path
 
@@ -9,17 +11,9 @@ from pathlib import Path
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
-logging.getLogger("imdbpy").setLevel(logging.ERROR)
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
-logging.getLogger("aiohttp").setLevel(logging.ERROR)
-logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
+logging.getLogger("cinemagoer").setLevel(logging.ERROR)
 
-from pyrogram import Client, idle 
-from pyromod import listen
-from database.ia_filterdb import Media
+from pyrogram import Client, idle
 from database.users_chats_db import db
 from info import *
 from utils import temp
@@ -28,6 +22,7 @@ from Script import script
 from datetime import date, datetime 
 from aiohttp import web
 from plugins import web_server
+from plugins.clone import restart_bots
 
 from TechVJ.bot import TechVJBot
 from TechVJ.util.keepalive import ping_server
@@ -60,18 +55,35 @@ async def start():
     b_users, b_chats = await db.get_banned()
     temp.BANNED_USERS = b_users
     temp.BANNED_CHATS = b_chats
-    await Media.ensure_indexes()
     me = await TechVJBot.get_me()
+    temp.BOT = TechVJBot
     temp.ME = me.id
     temp.U_NAME = me.username
     temp.B_NAME = me.first_name
-    logging.info(LOG_STR)
     logging.info(script.LOGO)
     tz = pytz.timezone('Asia/Kolkata')
     today = date.today()
     now = datetime.now(tz)
     time = now.strftime("%H:%M:%S %p")
-    await TechVJBot.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
+    try:
+        await TechVJBot.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
+    except:
+        print("Make Your Bot Admin In Log Channel With Full Rights")
+    for ch in CHANNELS:
+        try:
+            k = await TechVJBot.send_message(chat_id=ch, text="**Bot Restarted**")
+            await k.delete()
+        except:
+            print("Make Your Bot Admin In File Channels With Full Rights")
+    try:
+        k = await TechVJBot.send_message(chat_id=AUTH_CHANNEL, text="**Bot Restarted**")
+        await k.delete()
+    except:
+        print("Make Your Bot Admin In Force Subscribe Channel With Full Rights")
+    if CLONE_MODE == True:
+        print("Restarting All Clone Bots.......")
+        await restart_bots()
+        print("Restarted All Clone Bots.")
     app = web.AppRunner(await web_server())
     await app.setup()
     bind_address = "0.0.0.0"
@@ -84,4 +96,3 @@ if __name__ == '__main__':
         loop.run_until_complete(start())
     except KeyboardInterrupt:
         logging.info('Service Stopped Bye 👋')
-
